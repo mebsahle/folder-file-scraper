@@ -13,7 +13,7 @@ try:
     # create table if not exists ark_file (id integer PRIMARY KEY, name text not NULL);
     for file in list_of_dir:
         ## print("ey...",file)
-        if file.split('.')[1] == 'ark':
+        if file.split('.')[1] == 'ark': # can be changed to the file extension you wish to be selected
             ## print('hey', file.split('.')[0])
             file_metadata = (file.split('.')[0])
             sqlite_insert_Query = "INSERT INTO ark_file (id, name) VALUES (?,?)"
